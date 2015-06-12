@@ -1,0 +1,19 @@
+---
+title: Welcome to Middleman
+---
+
+<div class="welcome">
+  <h1>Products</h1>
+  <ul>
+    <% data.Products.Product.each do |id, product| %>
+      <li><%= product["productName"] %></li>
+      <% if product["image"] -%>
+        <img src="<%= product["image"][0]["url"]%>" />
+      <% end -%>
+      
+    <% end %>
+  </ul>
+  <p class="doc">
+    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
+  </p><!-- .doc -->
+</div><!-- .welcome -->

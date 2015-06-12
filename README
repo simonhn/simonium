@@ -1,0 +1,6 @@
+bundle exec middleman build --verbose 
+
+bundle exec middleman s3_sync --bucket=www.simonium.com 
+
+PRODUCTION_CLOUDFRONT_DISTRIBUTION_ID=E169DD723IGRUG bundle exec middleman invalidate 
+
