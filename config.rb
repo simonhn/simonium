@@ -6,7 +6,7 @@
 # compass_config do |config|
 #   config.output_style = :compact
 # end
-ENV = YAML::load(File.open('aws.yml')) 
+#ENV = YAML::load(File.open('aws.yml')) 
 
 activate :contentful do |f|
   f.space         = {Products: ENV['CONTENTFUL_SPACE']}
