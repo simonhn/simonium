@@ -16,3 +16,4 @@ deployment:
       - bundle exec middleman build --verbose
       # Upload data to AWS S3 (See gem 'middleman-s3_sync')
       - bundle exec middleman s3_sync
+      - bundle exec middleman invalidate
