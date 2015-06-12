@@ -11,6 +11,7 @@ deployment:
   production:
     branch: master
     commands:
+      - bundle exec middleman contentful
       # Middleman build
       - bundle exec middleman build --verbose
       # Upload data to AWS S3 (See gem 'middleman-s3_sync')
