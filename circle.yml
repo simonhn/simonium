@@ -1,7 +1,3 @@
-dependencies:
-  pre:
-    - bundle install
-
 # To speed things up, you can also cache directories.  Uncomment this and replace this with code above.
 # dependencies:
 #   cache_directories:
