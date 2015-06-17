@@ -1,19 +1,77 @@
 ---
-title: Welcome to Middleman
+title: Simon Hell Nielsen
 ---
-
-<div class="welcome">
-  <h1>Products</h1>
-  <ul>
-    <% data.Products.Product.each do |id, product| %>
-      <li><%= product["productName"] %></li>
-      <% if product["image"] -%>
-        <img src="<%= product["image"][0]["url"]%>" />
-      <% end -%>
-      
-    <% end %>
+<div id="container">
+  <div xmlns:v="http://rdf.data-vocabulary.org/#" typeof="v:Person">
+    <h1 property="v:name">simon helle nielsen</h1>
+    <ul> 
+      <li><a href="mailto:simonhn@gmail.com">simonhn@gmail.com</a></li>
+      <li>
+        <span rel="v:address">
+          <span typeof="v:Address">
+            <span property="v:city">Melbourne</span>,
+            <span property="v:country-name">Australia</span>
+          </span>
+        </span>
+      </li> 
+    </ul>
+  </div>
+  <h2 class="tealtxt">projects</h2>
+  <ul> 
+    <li><a href="http://playlistapi.abcradio.net.au">playlist aggregator and visualizer</a>: a playlist api to music played on the <a href="http://www.abc.net.au">abc</a></li> 
+    <li><a href="http://scheduleapi.abcradio.net.au">schedule api</a>: an api to the programs featured on <a href="http://www.abc.net.au/radio">abc radio</a></li> 
+    <li><a href="/photo">princess bridge photos</a>: spring to summer in Melbourne</li> 
+    <li><a href="http://cphsk8map.dk">cphsk8map</a>: a skaters guide to copenhagen</li>
+    <li><a href="http://psbikes.com.au">psbikes</a>: building a small site for my favourite bike pusher</li>
   </ul>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+
+  <h2 class="redtxt">latest snaps</h2>
+  <div id="image-container" class="clearfix"> 
+    <img id="loader" src="ajax-loader.gif"/>
+  </div>
+
+  <h2 class="greentxt">elsewhere</h2>
+  <ul> 
+    <li><a href="https://github.com/simonhn">github</a></li>
+    <li><a href="https://flickr.com/photos/simonhn">flickr</a></li> 
+    <li><a href="https://last.fm/user/simonhn">last.fm</a></li> 
+  <li><a href="https://au.linkedin.com/in/simonhn">linkedin</a></li> 
+  </ul>”
+
+  <script type="text/javascript"> 
+  $(function(){
+  	$('#loader')
+  	    .hide()  // hide it initially
+  	    .ajaxStart(function() {
+  	        $(this).show();
+  	    })
+  	    .ajaxStop(function() {
+  	        $(this).hide();
+  	});
+	
+  	var apiKey = '4e9a523523f384d5347fdcf9b3357395';
+  	$.getJSON('https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=' + apiKey + '&user_id=56825141@N00&per_page=8&format=json&jsoncallback=?',
+  	function(data){
+  		$.each(data.photos.photo, function(i,item){
+  			var photoURL = 'https://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_s.jpg';
+  			var href = '<a href="https://www.flickr.com/photos/simonhn/'+item.id +'" title="'+item.title+'" >'
+  			var imgCont = href + '<img src="'+photoURL+'" width="75" height="75" alt="'+item.title+'" /></a>';
+  			$(imgCont).appendTo('#image-container');
+  		});
+  	});
+
+	
+  });
+
+  </script>
+
+</div>
+
+<ul>
+  <% data.Products.Product.each do |id, product| %>
+    <li><%= product["productName"] %></li>
+    <% if product["image"] -%>
+      <img src="<%= product["image"][0]["url"]%>" />
+    <% end -%>
+  <% end %>
+</ul>
