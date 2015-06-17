@@ -27,7 +27,6 @@ title: Simon Hell Nielsen
 
   <h2 class="redtxt">latest snaps</h2>
   <div id="image-container" class="clearfix"> 
-    <img id="loader" src="ajax-loader.gif"/>
   </div>
 
   <h2 class="greentxt">elsewhere</h2>
@@ -36,19 +35,10 @@ title: Simon Hell Nielsen
     <li><a href="https://flickr.com/photos/simonhn">flickr</a></li> 
     <li><a href="https://last.fm/user/simonhn">last.fm</a></li> 
   <li><a href="https://au.linkedin.com/in/simonhn">linkedin</a></li> 
-  </ul>”
+  </ul>
 
   <script type="text/javascript"> 
-  $(function(){
-  	$('#loader')
-  	    .hide()  // hide it initially
-  	    .ajaxStart(function() {
-  	        $(this).show();
-  	    })
-  	    .ajaxStop(function() {
-  	        $(this).hide();
-  	});
-	
+  $(function(){	
   	var apiKey = '4e9a523523f384d5347fdcf9b3357395';
   	$.getJSON('https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=' + apiKey + '&user_id=56825141@N00&per_page=8&format=json&jsoncallback=?',
   	function(data){
@@ -59,19 +49,17 @@ title: Simon Hell Nielsen
   			$(imgCont).appendTo('#image-container');
   		});
   	});
-
-	
   });
 
   </script>
 
 </div>
 
-<ul>
-  <% data.Products.Product.each do |id, product| %>
-    <li><%= product["productName"] %></li>
-    <% if product["image"] -%>
-      <img src="<%= product["image"][0]["url"]%>" />
-    <% end -%>
-  <% end %>
-</ul>
+<!--<ul>
+  <% #data.Products.Product.each do |id, product| %>
+    <li><%#= product["productName"] %></li
+    <%# if product["image"] -%>
+      <img src="<%#= product["image"][0]["url"]%>" />
+    <% #end -%>
+  <% #end %>
+</ul>>-->
