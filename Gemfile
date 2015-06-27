@@ -18,3 +18,7 @@ gem "contentful_middleman"
 gem 'middleman-s3_sync'
 
 gem "middleman-cloudfront"
+
+gem 'middleman-imageoptim'
+
+gem 'middleman-minify-html'

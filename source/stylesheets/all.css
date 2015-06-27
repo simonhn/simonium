@@ -55,3 +55,62 @@ text-transform: none;
 .goldtxt { color: #d7b257; }
 .greentxt { color: #bdcf58; }
 .purpletxt { color: #ab77af; }
+
+.photoContainer {
+	margin:0 auto;
+	max-width:920px;
+}
+.disclaimer{
+	margin:20 auto;
+	max-width:920px;	
+}
+
+.photoslider_main {
+	position:relative;
+}
+
+.photoslider_nav {
+	margin:auto;
+	overflow:hidden;
+	position:relative;
+}
+
+.photoslider_thumb {
+	cursor:pointer;
+	float:left;
+	position:relative;
+}
+.photoContainer a, .photoContainer a:link {
+	color:white;
+}
+.photoContainer a:visited {
+	color:#111;
+	background:#fff;
+}
+.photoContainer a:hover {
+	background:white;
+	color:black;
+	text-decoration:none;
+}
+
+.photoslider_thumb img{
+	height:21.9px;
+	width:21.9px;
+}
+
+.photoslider_title{
+	margin:0 auto;
+	padding:5px;
+	font-size:12px;
+	//text-align: center;
+}
+
+#preview{
+	border:1px solid #ccc;
+	background:#333;
+	padding:5px;
+	font-size:10px;
+	color:white;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin:0 auto;
+}

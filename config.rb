@@ -6,7 +6,14 @@
 # compass_config do |config|
 #   config.output_style = :compact
 # end
-#ENV = YAML::load(File.open('aws.yml')) 
+#ENV = YAML::load(File.open('aws.yml'))
+
+# Pretty URLs - See https://middlemanapp.com/advanced/pretty_urls/
+activate :directory_indexes
+
+configure :development do
+  activate :livereload
+end
 
 activate :contentful do |f|
   f.space         = {Products: ENV['CONTENTFUL_SPACE']}
@@ -91,11 +98,14 @@ set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
+  activate :imageoptim
+  activate :minify_html
+  
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :asset_hash
