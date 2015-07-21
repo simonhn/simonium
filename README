@@ -4,10 +4,9 @@ bundle exec middleman s3_sync --bucket=www.simonium.com
 
 PRODUCTION_CLOUDFRONT_DISTRIBUTION_ID=E169DD723IGRUG bundle exec middleman invalidate 
 
-
 middleman server
 
 circleci.com er continous integration 
 Contentful.com er CMS as a service
 S3 (med cloudfront og SSL) er hosting
-Github er koden
+Github er kode hosting

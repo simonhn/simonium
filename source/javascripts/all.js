@@ -55,64 +55,67 @@ $(function(){
     $(sliderNav).append(clear);
     //setInterval( "movePhoto(1)", 180 );
   }
-  
-  $.preLoadImages(
-    "/images/princess/originals/1-September 02, 2009.jpg",
-    "/images/princess/originals/2-September 03, 2009.jpg",
-    "/images/princess/originals/3-September 07, 2009.jpg",
-    "/images/princess/originals/4-September 08, 2009.jpg",
-    "/images/princess/originals/5-September 09, 2009.jpg",
-    "/images/princess/originals/6-September 10, 2009.jpg",
-    "/images/princess/originals/7-September 14, 2009.jpg",
-    "/images/princess/originals/8-September 15, 2009.jpg",
-    "/images/princess/originals/9-September 16, 2009.jpg",
-    "/images/princess/originals/10-September 21, 2009.jpg",
-    "/images/princess/originals/11-September 22, 2009.jpg",
-    "/images/princess/originals/12-September 23, 2009.jpg",
-    "/images/princess/originals/13-September 24, 2009.jpg",
-    "/images/princess/originals/14-September 29, 2009.jpg",
-    "/images/princess/originals/15-October 01, 2009.jpg",
-    "/images/princess/originals/16-October 26, 2009.jpg",
-    "/images/princess/originals/17-October 27, 2009.jpg",
-    "/images/princess/originals/18-October 28, 2009.jpg",
-    "/images/princess/originals/19-October 29, 2009.jpg",
-    "/images/princess/originals/20-November 02, 2009.jpg",
-    "/images/princess/originals/21-November 04, 2009.jpg",
-    "/images/princess/originals/22-November 05, 2009.jpg",
-    "/images/princess/originals/23-November 09, 2009.jpg",
-    "/images/princess/originals/24-November 10, 2009.jpg",
-    "/images/princess/originals/25-November 11, 2009.jpg",
-    "/images/princess/originals/26-November 12, 2009.jpg",
-    "/images/princess/originals/27-November 25, 2009.jpg",
-    "/images/princess/originals/28-November 26, 2009.jpg",
-    "/images/princess/originals/29-November 27, 2009.jpg",
-    "/images/princess/originals/30-November 30, 2009.jpg",
-    "/images/princess/originals/31-December 01, 2009.jpg",
-    "/images/princess/originals/32-December 03, 2009.jpg",
-    "/images/princess/originals/33-December 07, 2009.jpg",
-    "/images/princess/originals/34-December 08, 2009.jpg",
-    "/images/princess/originals/35-December 09, 2009.jpg",
-    "/images/princess/originals/36-December 10, 2009.jpg",
-    "/images/princess/originals/37-December 14, 2009.jpg",
-    "/images/princess/originals/38-December 15, 2009.jpg",
-    "/images/princess/originals/39-December 16, 2009.jpg",
-    "/images/princess/originals/40-December 17, 2009.jpg",
-    "/images/princess/originals/41-December 21, 2009.jpg"
-  );
+  if (top.location.pathname === '/photo')
+  {
 
-  //click on image
-  $('.photoslider_thumb').each(function(){
-    $(this).click(function(ev){
-      if(ev.currentTarget){
-        thumb = $(ev.currentTarget);
-        $('.photoslider_main img').attr({src:thumb.attr('imageurl'),title:thumb.attr('title')});
-        $('.photoslider_title').text(thumb.attr('imageurl').slice(thumb.attr('imageurl').indexOf("-")+1,(thumb.attr('imageurl').length)-4));
+    $.preLoadImages(
+      "/images/princess/originals/1-September 02, 2009.jpg",
+      "/images/princess/originals/2-September 03, 2009.jpg",
+      "/images/princess/originals/3-September 07, 2009.jpg",
+      "/images/princess/originals/4-September 08, 2009.jpg",
+      "/images/princess/originals/5-September 09, 2009.jpg",
+      "/images/princess/originals/6-September 10, 2009.jpg",
+      "/images/princess/originals/7-September 14, 2009.jpg",
+      "/images/princess/originals/8-September 15, 2009.jpg",
+      "/images/princess/originals/9-September 16, 2009.jpg",
+      "/images/princess/originals/10-September 21, 2009.jpg",
+      "/images/princess/originals/11-September 22, 2009.jpg",
+      "/images/princess/originals/12-September 23, 2009.jpg",
+      "/images/princess/originals/13-September 24, 2009.jpg",
+      "/images/princess/originals/14-September 29, 2009.jpg",
+      "/images/princess/originals/15-October 01, 2009.jpg",
+      "/images/princess/originals/16-October 26, 2009.jpg",
+      "/images/princess/originals/17-October 27, 2009.jpg",
+      "/images/princess/originals/18-October 28, 2009.jpg",
+      "/images/princess/originals/19-October 29, 2009.jpg",
+      "/images/princess/originals/20-November 02, 2009.jpg",
+      "/images/princess/originals/21-November 04, 2009.jpg",
+      "/images/princess/originals/22-November 05, 2009.jpg",
+      "/images/princess/originals/23-November 09, 2009.jpg",
+      "/images/princess/originals/24-November 10, 2009.jpg",
+      "/images/princess/originals/25-November 11, 2009.jpg",
+      "/images/princess/originals/26-November 12, 2009.jpg",
+      "/images/princess/originals/27-November 25, 2009.jpg",
+      "/images/princess/originals/28-November 26, 2009.jpg",
+      "/images/princess/originals/29-November 27, 2009.jpg",
+      "/images/princess/originals/30-November 30, 2009.jpg",
+      "/images/princess/originals/31-December 01, 2009.jpg",
+      "/images/princess/originals/32-December 03, 2009.jpg",
+      "/images/princess/originals/33-December 07, 2009.jpg",
+      "/images/princess/originals/34-December 08, 2009.jpg",
+      "/images/princess/originals/35-December 09, 2009.jpg",
+      "/images/princess/originals/36-December 10, 2009.jpg",
+      "/images/princess/originals/37-December 14, 2009.jpg",
+      "/images/princess/originals/38-December 15, 2009.jpg",
+      "/images/princess/originals/39-December 16, 2009.jpg",
+      "/images/princess/originals/40-December 17, 2009.jpg",
+      "/images/princess/originals/41-December 21, 2009.jpg"
+    );
 
-      }
+    //click on image
+    $('.photoslider_thumb').each(function(){
+      $(this).click(function(ev){
+        if(ev.currentTarget){
+          thumb = $(ev.currentTarget);
+          $('.photoslider_main img').attr({src:thumb.attr('imageurl'),title:thumb.attr('title')});
+          $('.photoslider_title').text(thumb.attr('imageurl').slice(thumb.attr('imageurl').indexOf("-")+1,(thumb.attr('imageurl').length)-4));
+
+        }
+
+      });
 
     });
-
-  });
+}
   
   $(document).keydown(function(e) {
     var key = e.keyCode || e.which;
