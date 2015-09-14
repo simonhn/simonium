@@ -1,5 +1,3 @@
-//= require jquery
-
 $(function(){	
   var apiKey = '4e9a523523f384d5347fdcf9b3357395';
   $.getJSON('https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=' + apiKey + '&user_id=56825141@N00&per_page=8&format=json&jsoncallback=?',
