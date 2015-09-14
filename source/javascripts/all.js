@@ -55,7 +55,7 @@ $(function(){
     $(sliderNav).append(clear);
     //setInterval( "movePhoto(1)", 180 );
   }
-  if (top.location.pathname === '/photo')
+  if (top.location.pathname.indexOf("/photo") === 0)
   {
 
     $.preLoadImages(

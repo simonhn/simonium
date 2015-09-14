@@ -10,3 +10,5 @@ circleci.com er continous integration
 Contentful.com er CMS as a service
 S3 (med cloudfront og SSL) er hosting
 Github er kode hosting
+
+info her https://github.com/monsoonco/Middleman-AWS-Prismic-CircleCi
