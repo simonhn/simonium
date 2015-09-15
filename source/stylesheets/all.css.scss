@@ -1,13 +1,31 @@
 @charset "utf-8";
-$font-stack: "Droid Serif","ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia, serif;
+$font-stack: "Helvetica";
 body {
   font-family: $font-stack;
 }
 #image-container img { line-height:0px;margin: 10px; border-bottom:none;}
 
 li {list-style-type: none;}
+//
+//.index {
+//  position: relative;
+//  background: #5f357d;
+//  background: -webkit-radial-gradient(circle farthest-corner at right bottom, #ffd08a 0%, #ffa376 28%, #d26578 52%, #682a84 79%, #241668 100%);
+//  background: -moz-radial-gradient(circle farthest-corner at right bottom, #ffd08a 0%, #ffa376 28%, #d26578 52%, #682a84 79%, #241668 100%);
+//  background: -o-radial-gradient(circle farthest-corner at right bottom, #ffd08a 0%, #ffa376 28%, #d26578 52%, #682a84 79%, #241668 100%);
+//  background: -ms-radial-gradient(circle farthest-corner at right bottom, #ffd08a 0%, #ffa376 28%, #d26578 52%, #682a84 79%, #241668 100%);
+//  background: radial-gradient(circle farthest-corner at right bottom, #ffd08a 0%, #ffa376 28%, #d26578 52%, #682a84 79%, #241668 100%);
+//  color: #fff;
+//}
 
-
+.index .container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  
+}
+.index a {
+//  color: #fff;
+}
 
 .tealtxt { color: #72c9a8; }
 .redtxt { color: #eb5e3a; }
@@ -18,10 +36,11 @@ li {list-style-type: none;}
 
 .photoContainer {
 	margin:0 auto;
+  margin-top: 20px;
 	max-width:920px;
 }
 .disclaimer{
-	margin:20 auto;
+	margin:0 auto;
 	max-width:920px;	
 }
 
@@ -60,7 +79,6 @@ li {list-style-type: none;}
 
 .photoslider_title{
 	margin:0 auto;
-	padding:5px;
 	font-size:12px;
 	//text-align: center;
 }
@@ -74,3 +92,4 @@ li {list-style-type: none;}
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	margin:0 auto;
 }
+
