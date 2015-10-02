@@ -230,12 +230,12 @@ GEM
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
-    middleman-s3_sync (3.3.0)
+    middleman-s3_sync (3.0.47)
       ansi (~> 1.5.0)
       fog-aws (>= 0.1.1)
       map
-      middleman-core (~> 3.3)
-      parallel
+      middleman-core (>= 3.0.0)
+      pmap
       ruby-progressbar
       unf
     middleman-sprockets (3.4.2)
@@ -258,7 +258,7 @@ GEM
       tilt (~> 1.4.1)
     padrino-support (0.12.5)
       activesupport (>= 3.1)
-    parallel (1.6.1)
+    pmap (1.0.2)
     progress (3.1.0)
     rack (1.6.4)
     rack-livereload (0.3.16)
@@ -305,6 +305,6 @@ DEPENDENCIES
   middleman-imageoptim
   middleman-livereload (~> 3.1.0)
   middleman-minify-html
-  middleman-s3_sync
+  middleman-s3_sync (= 3.0.47)
   tzinfo-data
   wdm (~> 0.1.0)

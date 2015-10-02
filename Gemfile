@@ -15,7 +15,7 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 gem "contentful_middleman"
 
-gem 'middleman-s3_sync'
+gem 'middleman-s3_sync', "3.0.47"
 
 gem "middleman-cloudfront"
 
